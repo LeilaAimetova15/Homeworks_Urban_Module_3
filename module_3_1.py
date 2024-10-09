@@ -7,7 +7,7 @@ def string_info (string) :
     return (len(string), string.upper(), string.lower())
 def is_contains (string, list_to_search) :
     count_calls()
-    return #пока не совсем поняла как прописать условие: возвращает True, если строка находится в этом списке, False - если отсутствует. Регистром строки при проверке пренебречь: UrbaN ~ URBAN.
+    return string.upper() in [i.upper() for i in list_to_search]
 print(string_info('Capybara'))
 print(string_info('Armageddon'))
 print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
